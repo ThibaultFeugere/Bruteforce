@@ -51,3 +51,7 @@ Au lieu d'expliquer les trois scripts ici, j'ai préféré ajouter des commentai
 ## Alphabet pour le bruteforce
 
 `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789;@_#`
+
+### Conseil
+
+Pour tester les deux scripts bruteforce et trouver le premier mot de passe, je recommande d'utiliser cet alphabet : `abcdefghijklmnopqrstuvwxyz`.
