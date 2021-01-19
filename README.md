@@ -65,6 +65,43 @@ User : giselle Password : brazil
 User : root Password : t3_p@hEN_v12
 ```
 
+### Résultats de bruteforce_multiprocessing.py
+
+```
+python3 bruteforce_multiprocessing.py                                                                   130 ⨯
+Utilisateur : root | Hash : $1$934b4a210c17493f68bf6bfe74bff77a
+Utilisateur : fred | Hash : $1$9ebf8e708dcb3f28cb43d5d52655ab14
+Utilisateur : giselle | Hash : $1$6e5fa4d9c48ca921c0a2ce1e64c9ae6f
+Longueur : 6
+Longueur : 7
+Longueur : 8
+Mot de passe trouvé : brazil
+Longueur 6 terminé.
+```
+
+(Nous n'avons pas le temps sur ce script car il continue de chercher les deux autres mots de passe)
+
+### Résultats de bruteforce_multithreading.py
+
+```
+python3 bruteforce_multithreading.py                                                                    130 ⨯
+Utilisateur : root | Hash : $1$934b4a210c17493f68bf6bfe74bff77a
+Utilisateur : fred | Hash : $1$9ebf8e708dcb3f28cb43d5d52655ab14
+Utilisateur : giselle | Hash : $1$6e5fa4d9c48ca921c0a2ce1e64c9ae6f
+Thread numéro : 1 longueur : 1
+Thread numéro : 1 longueur : 2
+Thread numéro : 1 longueur : 3
+Thread numéro : 1 longueur : 4
+Thread numéro : 2 longueur : 6
+Thread numéro : 3 longueur : 7
+Thread numéro : 1 longueur : 5
+Thread 1 terminé en 0:00:26.941222
+Mot de passe trouvé : brazil
+Thread 2 terminé en 0:00:36.745293
+```
+
+(On voit que je trouve le mot de passe brazil en 36 secondes, en général c'est plus souvent 40 secondes)
+
 ## Alphabet pour le bruteforce
 
 `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789;@_#`
