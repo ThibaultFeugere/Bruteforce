@@ -102,6 +102,10 @@ Thread 2 terminé en 0:00:36.745293
 
 (On voit que je trouve le mot de passe brazil en 36 secondes, en général c'est plus souvent 40 secondes)
 
+## Votre script a-t-il réussi à découvrir tous les mots de passe dissimulés dans le fichier shadow ?
+
+Dans un temps raisonnable, mon script n'a trouvé qu'un seul mot de passe. Si ma puissance de calcul est infinie ou le temps disponible infini, alors j'aurais trouvé tous les mots de passe au bout d'un certains temps.
+
 ## Alphabet pour le bruteforce
 
 `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789;@_#`
