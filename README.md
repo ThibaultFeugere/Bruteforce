@@ -55,3 +55,9 @@ Au lieu d'expliquer les trois scripts ici, j'ai préféré ajouter des commentai
 ### Conseil
 
 Pour tester les deux scripts bruteforce et trouver le premier mot de passe, je recommande d'utiliser cet alphabet : `abcdefghijklmnopqrstuvwxyz`.
+
+
+## Ressources
+
+- [Fichier dico_mini_fr](./dico_mini_fr)
+- [Fichier shadow](./shadow)
