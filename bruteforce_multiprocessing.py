@@ -7,7 +7,7 @@ import time
 import multiprocessing 
 
 def findHashes():
-    lines = open('shadow_copy', 'r').readlines()
+    lines = open('shadow', 'r').readlines()
     hashes = []
     for line in lines:
         shadow_line_elements = line.replace('\n', '').split(':')
