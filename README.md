@@ -1,2 +1,41 @@
 # Bruteforce
 
+Les seules informations dont vous disposez à ce sujet, sont le nom du fichier : `shadow` ainsi qu'une wordlist nommée `dico_mini_fr`
+
+
+## Rappels théoriques
+
+
+### En vous aidant de la documentation disponible sur internet, expliquez en détail la structure du fichier qui vous a été fourni. 
+
+On nous a fourni un fichier shadow qui possède 8 (doc : 9) “ : ”. 
+Le premier élément est le nom d’utilisateur (login)
+Le deuxième élément est le hash du mot de passe avec la structure $id$salt$hashed.
+Information : parfois il y a un “ ! ” ou “ * “. Seulement signifie que le compte est verrouillé (ex mysql) mais un autre utilisateur peut quand même se connecter dessus. 
+Le troisième élément est le jour où le mot de passe à été changé (depuis 1970) https://www.epochconverter.com/seconds-days-since-y0
+Le quatrième élément et le nombre de jours minimum avant de changer son mot de passe.
+Le cinquième élément et le nombre de jours maximum avant de changer son mot de passe.
+Le sixième élément est le nombre de jours avant l’expiration de son mot de passe pendant lequel l’utilisateur est averti.
+
+
+### Compte-tenu des résultats de cette analyse, déduisez le nom de l'algorithme utilisé pour générer les empreintes des mots de passe qui se trouvent dans ce fichier.
+
+Nous pouvons voir trois hash :
+Le compte de root : $1$934b4a210c17493f68bf6bfe74bff77a
+Le compte de fred : $1$9ebf8e708dcb3f28cb43d5d52655ab14
+Le compte de Giselle : $1$6e5fa4d9c48ca921c0a2ce1e64c9ae6f
+
+Le $1$ nous informe que la fonction de hachage utilisée est le MD5.
+On peut vérifier avec hash identifier.
+
+## Rappelez moi en quoi consiste une attaque par force brute, ou recherche exhaustive
+
+L’attaque par force brute consiste à générer des mots de passe en testant toutes les combinaisons possibles jusqu’à l’obtention du mot de passe.
+
+## Scripts
+
+Au lieu d'expliquer les trois scripts ici, j'ai préféré ajouter des commentaires dans le code python.
+
+## Alphabet pour le bruteforce
+
+`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789;@_#`
