@@ -6,7 +6,7 @@ start = datetime.now()
 dico = open('dico_mini_fr', 'r')
 dico_lines = dico.readlines()
 
-shadow = open('shadow_copy', 'r')
+shadow = open('shadow', 'r')
 shadow_lines = shadow.readlines()
 
 path = 'results_dico.txt'
