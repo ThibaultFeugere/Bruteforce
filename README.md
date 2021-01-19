@@ -114,6 +114,18 @@ Dans un temps raisonnable, mon script n'a trouvé qu'un seul mot de passe. Si ma
 
 Pour tester les deux scripts bruteforce et trouver le premier mot de passe, je recommande d'utiliser cet alphabet : `abcdefghijklmnopqrstuvwxyz`.
 
+## Pourquoi deux scripts de bruteforce ?
+
+J'ai travaillé sur une machine virtuelle qui possède 6 coeurs mais il faut savoir que python par défaut est exécuté sur un seul thread (on peut le voir en faisant la commande `htop`, alors un seul thread est à 100%) ce qui fait que le bruteforce peut être très long. 
+J'ai donc essayé deux méthodes : multithread et multiprocess.
+
+Le multithreading, bien que le script fonctionne, est un échec car il divise en fait les 100% sur trois thread. Ce qui fait que j'ai 3 thread entre 30% et 33%.
+
+(En faisant quelques recherches sur internet je me rends compte que pleins de personnes se sont posées ce genre de question et qu'il existe une alternative : le multiprocessing)
+
+Le multiprocessing n'est pas l'exécution d'un programme sur plusieurs thread mais sur plusieurs coeurs (ce qui n'a rien changé car sur ma VM il n'y a qu'un coeur physique). Cependant, sur mon hôte la différence est importante. Je trouvais ça intéressant de creuser ce sujet.
+
+Voilà un super article : [Multiprocessing Vs. Threading In Python: What You Need To Know](https://timber.io/blog/multiprocessing-vs-multithreading-in-python-what-you-need-to-know/)
 
 ## Ressources
 
