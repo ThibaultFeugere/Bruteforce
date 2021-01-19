@@ -45,8 +45,25 @@ L’avantage de l’attaque par force brute est, qu’avec une infinité de temp
 
 ## Scripts
 
-Au lieu d'expliquer les trois scripts ici, j'ai préféré ajouter des commentaires dans le code python.
+### Résultats de `dico_attack.py`
 
+```
+Utilisateur : root | Hash : $1$934b4a210c17493f68bf6bfe74bff77a
+Utilisateur : fred | Hash : $1$9ebf8e708dcb3f28cb43d5d52655ab14
+Utilisateur : giselle | Hash : $1$6e5fa4d9c48ca921c0a2ce1e64c9ae6f
+-------------------------------
+2 mots de passe trouvés
+Résultats stockés dans : results_dico.txt
+------------
+Executés en : 0:00:00.007985
+```
+
+### results_dico.txt
+
+```
+User : giselle Password : brazil
+User : root Password : t3_p@hEN_v12
+```
 
 ## Alphabet pour le bruteforce
 
